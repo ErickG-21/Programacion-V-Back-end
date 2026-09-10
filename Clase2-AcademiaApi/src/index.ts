@@ -15,3 +15,11 @@ app.listen(PORT, () => {
 app.get('/',(req, res) => {
   res.status(200).json({ status: 'El servidor esta funcionando correctamente' })
 });
+
+app.get('/alumnos',(req, res) => {
+  res.status(200).json([  
+  {id:1, nombre: 'Juan', apellido: 'Perez', edad: 20},
+  {id:2, nombre: 'Maria', apellido: 'Gomez', edad: 22},
+  {id:3, nombre: 'Pedro', apellido: 'Lopez', edad: 21},
+])
+});
