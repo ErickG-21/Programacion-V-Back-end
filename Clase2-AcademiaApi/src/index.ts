@@ -11,3 +11,7 @@ app.get('/health',(req, res) => {
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`)
 });
+
+app.get('/',(req, res) => {
+  res.status(200).json({ status: 'El servidor esta funcionando correctamente' })
+});
